@@ -142,3 +142,35 @@ namespace TheNextCar.Model
 ```
 ## Apa kegunaan interface `OnDoorChanged` ?
 - interface `OnDoorChanged` berfungsi untuk mengganti fungsi dari `Door` dan `DoorController`.
+```csharp
+public DoorController(OnDoorChanged onDoorChanged)
+        {
+            this.door = new Door();
+            this.onDoorChanged = onDoorChanged;
+        }
+
+        public void close()
+        {
+            this.door.close();
+            this.onDoorChanged.doorStatusChanged("CLOSED", "Door is Closed");
+        }
+
+        public void open()
+        {
+            this.door.open();
+            this.onDoorChanged.doorStatusChanged("OPENED", "Door is Opened");
+        }
+
+        public void activateLock()
+        {
+            if (this.door.isClosed())
+            {
+                this.door.activateLock();
+                onDoorChanged.doorSecurityChanged("LOCKED", "Door Locked");
+            }
+            else
+            {
+                unlock();
+            }
+        }
+```
