@@ -1,0 +1,21 @@
+﻿<Window x:Class="TheNextCar.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TheNextCar"
+        mc:Ignorable="d"
+        Title="Car Safety | The Next Car" Height="332" Width="393.6" Background="Black">
+    <Grid Margin="0,0,4,0">
+        <Button x:Name="StartButton" Content="STOPPED" HorizontalAlignment="Left" Margin="21,243,0,0" VerticalAlignment="Top" Width="75" Click="OnStartButtonClicked" Background="#FFEE0000"/>
+        <Button x:Name="DoorOpenButton" Content="CLOSE" HorizontalAlignment="Left" Margin="124,243,0,0" VerticalAlignment="Top" Width="75" Click="OnDoorOpenButtonClicked" Background="#FFF4FF00"/>
+        <Button x:Name="LockDoorButton" Content="LOCK" HorizontalAlignment="Left" Margin="214,243,0,0" VerticalAlignment="Top" Width="75" Click="OnLockDoorButtonClicked" Background="#FF00FF15"/>
+        <Button x:Name="AccuButton" Content="OFF" HorizontalAlignment="Left" Margin="323,243,0,0" VerticalAlignment="Top" Width="38" Click="OnAccuButtonClicked" Background="#FF00FAFF"/>
+        <Label x:Name="status" Content="Engine Stopped" HorizontalAlignment="Left" Margin="15,267,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="DoorOpenState" Content="Door Is Open" HorizontalAlignment="Left" Margin="124,267,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="LockDoorState" Content="Door Unlocked" HorizontalAlignment="Left" Margin="209,267,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Label x:Name="AccuState" Content="Power Off" HorizontalAlignment="Left" Margin="313,267,0,0" VerticalAlignment="Top" Background="Black" Foreground="White"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="293" Margin="0,10,0,0" VerticalAlignment="Top" Width="385" Source="Assets/navigation.jpg"/>
+
+    </Grid>
+</Window>
